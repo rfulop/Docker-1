@@ -1,0 +1,7 @@
+docker run -dt -p 3000:3000 --name Abathur -v ~/Abathur:/root python:2-slim
+docker exec Abathur pip install flask
+docker cp hello.py Abathur:/root
+docker exec Abathur python /root/hello.py
+
+#Test it with:
+# curl 192.168.99.100:3000
